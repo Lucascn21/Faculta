@@ -1,0 +1,578 @@
+{
+	"info": {
+		"_postman_id": "f8c53d65-9b2a-4a04-8c35-9c5a3f5d1b05",
+		"name": "Sistema de Gestión de Permisos",
+		"description": "Colección de endpoints para probar el sistema de gestión de permisos, roles y usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inicio",
+			"item": [
+				{
+					"name": "Página de inicio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								""
+							]
+						},
+						"description": "Página de inicio del sistema"
+					},
+					"response": []
+				}
+			],
+			"description": "Rutas principales del sistema"
+		},
+		{
+			"name": "Permisos",
+			"item": [
+				{
+					"name": "Listar todos los permisos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions"
+							]
+						},
+						"description": "Obtiene la lista de todos los permisos"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar permisos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/permissions?search=user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "user"
+								}
+							]
+						},
+						"description": "Busca permisos por nombre"
+					},
+					"response": []
+				},
+				{
+					"name": "Formulario para crear permiso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/permissions/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions",
+								"create"
+							]
+						},
+						"description": "Muestra el formulario para crear un nuevo permiso"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo permiso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test_permission",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Permiso de prueba",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions"
+							]
+						},
+						"description": "Crea un nuevo permiso en el sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Formulario para editar permiso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/permissions/1/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions",
+								"1",
+								"edit"
+							]
+						},
+						"description": "Muestra el formulario para editar un permiso existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar permiso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "updated_permission",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Permiso actualizado",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/permissions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions",
+								"1"
+							]
+						},
+						"description": "Actualiza un permiso existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar permiso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/permissions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"permissions",
+								"1"
+							]
+						},
+						"description": "Elimina un permiso del sistema"
+					},
+					"response": []
+				}
+			],
+			"description": "Operaciones relacionadas con permisos"
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Listar todos los roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles"
+							]
+						},
+						"description": "Obtiene la lista de todos los roles"
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalle de rol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/roles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"1"
+							]
+						},
+						"description": "Ver los detalles de un rol específico incluyendo sus permisos"
+					},
+					"response": []
+				},
+				{
+					"name": "Formulario para crear rol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/roles/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"create"
+							]
+						},
+						"description": "Muestra el formulario para crear un nuevo rol"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo rol",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test_role",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Rol de prueba",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles"
+							]
+						},
+						"description": "Crea un nuevo rol en el sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Formulario para editar rol",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/roles/1/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"1",
+								"edit"
+							]
+						},
+						"description": "Muestra el formulario para editar un rol existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar rol",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "updated_role",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Rol actualizado",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"2"
+							]
+						},
+						"description": "Actualiza un rol existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Formulario para asignar permisos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/roles/1/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"1",
+								"permissions"
+							]
+						},
+						"description": "Muestra el formulario para asignar permisos a un rol"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar permisos de rol",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "permissions",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "permissions",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "permissions",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles/2/permissions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"2",
+								"permissions"
+							]
+						},
+						"description": "Actualiza los permisos asignados a un rol"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar rol",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/roles/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"roles",
+								"2"
+							]
+						},
+						"description": "Elimina un rol del sistema"
+					},
+					"response": []
+				}
+			],
+			"description": "Operaciones relacionadas con roles"
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Listar todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						},
+						"description": "Obtiene la lista de todos los usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Ver detalle de usuario con permisos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						},
+						"description": "Ver los detalles de un usuario específico incluyendo sus permisos heredados del rol"
+					},
+					"response": []
+				}
+			],
+			"description": "Operaciones relacionadas con usuarios"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

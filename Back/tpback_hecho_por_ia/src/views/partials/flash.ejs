@@ -1,0 +1,35 @@
+<% if (flash && flash.success && flash.success.length > 0) { %>
+    <div class="alert alert-success alert-dismissible fade show">
+        <% flash.success.forEach(function(message) { %>
+            <%= message %>
+        <% }); %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if (flash && flash.error && flash.error.length > 0) { %>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <% flash.error.forEach(function(message) { %>
+            <%= message %>
+        <% }); %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if (locals.error) { %>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if (locals.errors && errors.length > 0) { %>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <ul class="mb-0">
+            <% errors.forEach(function(error) { %>
+                <li><%= error.msg %></li>
+            <% }); %>
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
