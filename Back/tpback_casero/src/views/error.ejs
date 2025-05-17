@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error <%= status || '500' %> | Imperio</title>
+    <link rel="stylesheet" href="/css/warhammer-style.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .error-code {
+            font-size: 8em;
+            color: var(--mechanicus-red);
+            margin: 0;
+            text-shadow: 0 0 10px rgba(128, 0, 0, 0.7);
+            font-weight: bold;
+        }
+        
+        .error-message {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: var(--imperial-gold);
+        }
+        
+        .error-details {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--imperial-gold);
+            text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: var(--parchment);
+        }
+        
+        .skull-icon {
+            font-size: 4em;
+            color: var(--imperial-gold);
+            margin: 20px 0;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+        }
+        
+        .back-button {
+            margin-top: 30px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Administración del Imperio</h1>
+        <div class="subtitle">Adeptus Administratum - Servicio de Errores</div>
+    </header>
+    
+    <div class="container error-container">
+        <div class="skull-icon">☠</div>
+        
+        <h2 class="error-code"><%= status || '500' %></h2>
+        
+        <div class="error-message">
+            <%= message || 'Error interno del servidor' %>
+        </div>
+        
+        <div class="imperial-quote">
+            "Hasta en el fallo, hay servicio al Emperador. Aprende de los errores o enfréntate a la purga."
+        </div>
+        
+        <% if (process.env.NODE_ENV === 'development' && error) { %>
+            <div class="error-details">
+                <strong>Detalles del error (solo visible en desarrollo):</strong><br>
+                <%= error.stack || error %>
+            </div>
+        <% } %>
+        
+        <a href="/" class="imperial-button back-button">Volver al Inicio</a>
+    </div>
+    
+    <footer>
+        <p>Por la gloria del Emperador de la Humanidad | Adeptus Administratum &copy; 41st Milenio</p>
+        <p>Sanctioned by the Inquisition</p>
+    </footer>
+    
+    <script src="/js/warhammer-scripts.js"></script>
+</body>
+</html>

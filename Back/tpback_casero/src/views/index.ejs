@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Imperio</title>
+    <link rel="stylesheet" href="/css/warhammer-style.css">
+    <style>
+        .welcome-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .menu-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .menu-option {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            background-color: rgba(26, 26, 26, 0.9);
+            border: 2px solid var(--imperial-gold);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .menu-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            background-color: rgba(40, 40, 40, 0.9);
+        }
+        
+        .menu-option h3 {
+            color: var(--imperial-gold);
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .menu-option p {
+            margin-bottom: 20px;
+            color: var(--parchment);
+        }
+        
+        .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: var(--imperial-gold);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Portal del Imperio</h1>
+        <div class="subtitle">Adeptus Administratum - Centro de Operaciones</div>
+    </header>
+    
+    <div class="container welcome-container">
+        <div class="imperial-seal-css">
+            <div class="aquila">][</div>
+        </div>
+        
+        <div class="imperial-quote">
+            "Al servicio del Trono Dorado. La burocracia es la mayor arma del Imperio."
+        </div>
+        
+        <h2>Bienvenido al Portal Administrativo del Imperio</h2>
+        
+        <div class="menu-options">
+            <a href="/users" class="menu-option">
+                <div class="icon">👤</div>
+                <h3>Usuarios</h3>
+                <p>Administración de personal. Reclutamiento, asignaciones y baja de servicio.</p>
+                <button class="imperial-button">Acceder</button>
+            </a>
+            
+            <div class="menu-option">
+                <div class="icon">📊</div>
+                <h3>Reportes</h3>
+                <p>Estadísticas y análisis del estado del Imperio. Solo personal autorizado.</p>
+                <button class="imperial-button">Acceder</button>
+            </div>
+            
+            <div class="menu-option">
+                <div class="icon">⚔️</div>
+                <h3>Armamento</h3>
+                <p>Inventario y requisición de equipamiento militar y defensivo.</p>
+                <button class="imperial-button">Acceder</button>
+            </div>
+        </div>
+        
+        <div class="imperial-quote">
+            "Conocimiento es poder, guárdalo bien."
+        </div>
+    </div>
+    
+    <footer>
+        <p>Por la gloria del Emperador de la Humanidad | Adeptus Administratum &copy; 41st Milenio</p>
+        <p>Sanctioned by the Inquisition</p>
+    </footer>
+    
+    <script src="/js/warhammer-scripts.js"></script>
+</body>
+</html>

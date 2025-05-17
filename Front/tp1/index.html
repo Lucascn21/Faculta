@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Gatos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>    <header class="header" id="inicio">
+        <div class="logo">
+            <h1><a href="#inicio">Tienda de Gatos</a></h1>
+        </div>
+        <button class="hamburger-btn" aria-label="Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner" class="banner">
+            <div class="banner-content">
+                <h2>¡Bienvenido a Tienda de Gatos!</h2>
+                <p>Encuentra el felino perfecto para tu hogar</p>
+                <a href="#catalogo" class="btn">Ver Gatos</a>
+            </div>
+        </section>        <section id="catalogo" class="catalogo">
+            <h2>Nuestros Gatos</h2>            
+            <div class="grid-container">
+                <div class="card">
+                    <img src="img/siames.jpg" alt="Gato Siamés">
+                    <div class="card-content">
+                        <h3>Gato Siamés</h3>
+                        <p>Un gato elegante y conversador. Ideal para familias activas.</p>
+                        <p class="precio">$1500</p>
+                        <button class="btn">Adoptar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/persa.jpg" alt="Gato Persa">
+                    <div class="card-content">
+                        <h3>Gato Persa</h3>
+                        <p>Pelaje largo y personalidad tranquila. Perfecto para hogares relajados.</p>
+                        <p class="precio">$1800</p>
+                        <button class="btn">Adoptar</button>
+                    </div>                </div>                
+                <div class="card">
+                    <img src="img/maine_coon_new.jpg" alt="Gato Maine Coon">
+                    <div class="card-content">
+                        <h3>Maine Coon</h3>
+                        <p>Grande y amigable. Una raza conocida por su naturaleza gentil.</p>
+                        <p class="precio">$2000</p>
+                        <button class="btn">Adoptar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/bengali.jpg" alt="Gato Bengalí">
+                    <div class="card-content">
+                        <h3>Bengalí</h3>
+                        <p>Apariencia salvaje pero carácter doméstico. Muy activo y juguetón.</p>
+                        <p class="precio">$1900</p>
+                        <button class="btn">Adoptar</button>
+                    </div>                </div>                
+                <div class="card">
+                    <img src="img/sphynx_new.jpg" alt="Gato Sphynx">
+                    <div class="card-content">
+                        <h3>Sphynx</h3>
+                        <p>Sin pelo, pero con mucho cariño para dar. Necesita cuidados especiales.</p>
+                        <p class="precio">$2200</p>
+                        <button class="btn">Adoptar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/ragdoll.jpg" alt="Gato Ragdoll">
+                    <div class="card-content">
+                        <h3>Ragdoll</h3>
+                        <p>Dócil y cariñoso. Se relaja completamente cuando lo cargas.</p>
+                        <p class="precio">$1700</p>
+                        <button class="btn">Adoptar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>En Tienda de Gatos, nos dedicamos a encontrar hogares amorosos para nuestros felinos. Todos nuestros gatos provienen de criadores responsables y reciben atención veterinaria completa.</p>
+                    <p>Fundada en 2020, nuestra misión es conectar a personas con el compañero felino perfecto para su estilo de vida.</p>                </div>                
+                <div class="about-image">
+                    <img src="img/gato_banner.jpg" alt="Nuestro equipo con gatos">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Dirección:</strong> Av. de los Gatos 123, Ciudad Felina</p>
+                    <p><strong>Teléfono:</strong> (123) 456-7890</p>
+                    <p><strong>Email:</strong> info@tiendadegatos.com</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Tienda de Gatos</h3>
+                <p>Tu tienda de confianza para encontrar el felino perfecto</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tienda de Gatos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+w

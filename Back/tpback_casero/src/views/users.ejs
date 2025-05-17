@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración de Usuarios del Imperio | Warhammer 40K</title>
+    <link rel="stylesheet" href="/css/warhammer-style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Administración de Usuarios del Imperio</h1>
+      <div class="subtitle">Adeptus Administratum - Registro de Servitors</div>
+    </header>
+    <div class="container">
+      <!-- Reemplazado imagen con un emblema generado por CSS -->
+      <div class="imperial-seal-css">
+        <div class="aquila">][</div>
+      </div>
+
+      <div class="imperial-quote">
+        "En el oscuro milenio actual, solo hay guerra. Servir al Imperio es el
+        mayor honor."
+      </div>
+
+      <div class="controls">
+        <button class="imperial-button">+ Nuevo Usuario</button>
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Buscar por nombre o rango..."
+          />
+          <button class="imperial-button">Buscar</button>
+        </div>
+      </div>
+
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Rango Imperial</th>
+            <th>Planeta de Origen</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (typeof users !== 'undefined' && users.length > 0) { %> <%
+          users.forEach(user => { %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.name %></td>
+            <td><%= user.rank %></td>
+            <td><%= user.planet %></td>
+            <td>
+              <span
+                class="status <%= user.active ? 'status-active' : 'status-inactive' %>"
+              >
+                <%= user.active ? 'Activo' : 'Inactivo' %>
+              </span>
+            </td>
+            <td class="user-actions">
+              <button class="action-button">Ver</button>
+              <button class="action-button">Editar</button>
+              <button class="action-button">Eliminar</button>
+            </td>
+          </tr>
+          <% }); %> <% } else { %>
+          <tr>
+            <td colspan="6" style="text-align: center">
+              No hay usuarios registrados en la base de datos del Imperio. El
+              Emperador proveerá.
+            </td>
+          </tr>
+          <% } %>
+
+          <!-- Datos de ejemplo (se mostrarán si no hay datos reales) -->
+          <% if (typeof users === 'undefined') { %>
+          <tr>
+            <td>WH-40001</td>
+            <td>Roboute Guilliman</td>
+            <td>Primarca</td>
+            <td>Macragge</td>
+            <td><span class="status status-active">Activo</span></td>
+            <td class="user-actions">
+              <button class="action-button">Ver</button>
+              <button class="action-button">Editar</button>
+              <button class="action-button">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>WH-40002</td>
+            <td>Commissar Yarrick</td>
+            <td>Comisario</td>
+            <td>Armageddon</td>
+            <td><span class="status status-active">Activo</span></td>
+            <td class="user-actions">
+              <button class="action-button">Ver</button>
+              <button class="action-button">Editar</button>
+              <button class="action-button">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>WH-40003</td>
+            <td>Gabriel Angelos</td>
+            <td>Capitán Capítulo</td>
+            <td>Cyrene</td>
+            <td><span class="status status-active">Activo</span></td>
+            <td class="user-actions">
+              <button class="action-button">Ver</button>
+              <button class="action-button">Editar</button>
+              <button class="action-button">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>WH-40004</td>
+            <td>Inquisidor Eisenhorn</td>
+            <td>Inquisidor Ordo Xenos</td>
+            <td>Terra</td>
+            <td><span class="status status-inactive">Inactivo</span></td>
+            <td class="user-actions">
+              <button class="action-button">Ver</button>
+              <button class="action-button">Editar</button>
+              <button class="action-button">Eliminar</button>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+      <div class="imperial-quote">
+        "El Emperador protege a los leales. El Emperador guía a los fieles."
+      </div>
+    </div>    <footer>
+      <p>
+        Por la gloria del Emperador de la Humanidad | Adeptus Administratum
+        &copy; 41st Milenio
+      </p>
+      <p>Sanctioned by the Inquisition</p>
+    </footer>
+
+    <script src="/js/warhammer-scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #121212;
+}
+
+/* Clase para prevenir scroll cuando el menú móvil está abierto */
+body.no-scroll {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+}
+
+a {
+    text-decoration: none;
+    color: #ff6b6b;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff5252;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+/* Header */
+.header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.logo h1 a {
+    font-size: 1.8rem;
+    color: #ff6b6b;
+    margin-bottom: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo h1 a:hover {
+    color: #ff8080;
+}
+
+/* Hamburger Menu Button */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    justify-self: end;
+    z-index: 101;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.menu li {
+    padding: 0.5rem 1rem;
+}
+
+.menu a {
+    font-weight: 500;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff6b6b;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Banner */
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/gato_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.banner-content {
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Catálogo - Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card styles */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    margin: 1rem 0;
+}
+
+/* Nosotros */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-text {
+    padding: 1rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Contacto */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #252525;
+    color: #e0e0e0;
+}
+
+.contact-info {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo h3 {
+    color: #ff6b6b;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.social-icon {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.social-icon:hover {
+    color: #ff6b6b;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .hamburger-btn.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-btn.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #1e1e1e;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        padding: 4rem 2rem 2rem;
+        transition: right 0.3s ease;
+        z-index: 100;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu ul {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-content,
+    .contact-container,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    .card img {
+        height: 200px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+}

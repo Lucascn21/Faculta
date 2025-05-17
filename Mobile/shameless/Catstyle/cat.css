@@ -1,0 +1,48 @@
+body {
+  background-color: #fef6e4;
+  margin: 0;
+  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  z-index: 100;
+}
+
+#cat {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 120px;
+  cursor: pointer;
+  transition: left 1s;
+}
+
+.item {
+  position: absolute;
+  bottom: 120px;
+  left: 180px;
+  width: 80px;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
