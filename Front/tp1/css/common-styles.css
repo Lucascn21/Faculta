@@ -1,3 +1,4 @@
+/* Estilos comunes - Base, Header, Footer y elementos compartidos */
 /* Reset y estilos generales */
 * {
     margin: 0;
@@ -71,8 +72,8 @@ section h2 {
     position: sticky;
     top: 0;
     z-index: 100;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -109,9 +110,9 @@ section h2 {
 }
 
 .menu ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .menu li {
@@ -140,7 +141,7 @@ section h2 {
 
 /* Banner */
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/gato_banner.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/gato_banner.jpg');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -168,13 +169,34 @@ section h2 {
     margin-bottom: 2rem;
 }
 
-/* Catálogo - Grid Layout */
-.grid-container {
+/* Page Banner (para páginas internas) */
+.page-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/gato_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 0 1rem;
+    place-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.page-banner .banner-content {
+    max-width: 800px;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.page-banner h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.page-banner p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 /* Animations */
@@ -189,7 +211,7 @@ section h2 {
     }
 }
 
-/* Card styles */
+/* Card styles - Utilizado en varias páginas */
 .card {
     background-color: #1e1e1e;
     border-radius: 8px;
@@ -219,79 +241,13 @@ section h2 {
     margin-bottom: 0.5rem;
 }
 
-.precio {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ff6b6b;
-    margin: 1rem 0;
-}
-
-/* Nosotros */
-.about-content {
+/* Grid Layout - Utilizado en varias páginas */
+.grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    align-items: center;
-}
-
-.about-text {
-    padding: 1rem;
-}
-
-.about-text p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.about-image {
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Contacto */
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.contact-form {
-    background-color: #1e1e1e;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #444;
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: #252525;
-    color: #e0e0e0;
-}
-
-.contact-info {
-    background-color: #1e1e1e;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.contact-info p {
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
 }
 
 /* Footer */
@@ -341,84 +297,21 @@ section h2 {
     border-top: 1px solid #555;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        grid-template-columns: 1fr 1fr;
-        padding: 1rem;
-    }
+/* Mejoras de accesibilidad */
+:focus {
+    outline: 2px solid #ff6b6b;
+    outline-offset: 2px;
+}
 
-    .hamburger-btn {
-        display: block;
-    }
+a:focus, button:focus {
+    text-decoration: underline;
+}
 
-    .hamburger-btn.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger-btn.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger-btn.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }    .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: #1e1e1e;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-        padding: 4rem 2rem 2rem;
-        transition: right 0.3s ease;
-        z-index: 100;
-    }
-
-    .menu.active {
-        right: 0;
-    }
-
-    .menu ul {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .about-content,
-    .contact-container,
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-
-    .banner h2 {
-        font-size: 2.2rem;
-    }
-
-    .banner p {
-        font-size: 1.2rem;
-    }
-
-    section {
-        padding: 2rem 1rem;
-    }
-
-    section h2 {
-        font-size: 2rem;
-    }
-    
-    .card img {
-        height: 200px;
-    }
-    
-    .grid-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 2rem auto;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
     }
 }

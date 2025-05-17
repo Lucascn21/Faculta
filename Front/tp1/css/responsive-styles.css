@@ -1,0 +1,343 @@
+/* Estilos responsivos para todas las páginas */
+
+/* Pantallas medianas (tablets, hasta 768px) */
+@media (max-width: 768px) {
+    /* Ajustes para header y navegación */
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .hamburger-btn.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-btn.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #1e1e1e;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        padding: 4rem 2rem 2rem;
+        transition: right 0.3s ease;
+        z-index: 100;
+        overflow-y: auto; /* Scroll si el menú es largo */
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustes para layout responsivo */
+    .about-content,
+    .contact-container,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+    
+    /* Ajustes para cards e imágenes */
+    .card img {
+        height: 200px;
+    }
+    
+    .feature-card img, 
+    .service-image img, 
+    .tutorial-card img {
+        height: 200px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    .packages-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    /* Ajustes para banner y page-banner */
+    .page-banner {
+        height: 30vh;
+        background-attachment: scroll; /* Mejora en dispositivos móviles */
+    }
+    
+    .banner {
+        background-attachment: scroll; /* Mejora en dispositivos móviles */
+    }
+
+    .page-banner h2 {
+        font-size: 2.2rem;
+    }
+
+    .page-banner p {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustes para filtros */
+    .filter-options {
+        gap: 0.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Ajustes para tutoriales */
+    .tutorial-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    .tutorial-card img {
+        height: 200px;
+    }
+
+    .video-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-placeholder {
+        height: 220px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    /* Ajustes para Trabaja con nosotros */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+
+    .jobs-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+    
+    .benefit-icon {
+        font-size: 2.5rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .application-form {
+        padding: 1.5rem;
+    }
+    
+    /* Ajustes para formularios */
+    input, select, textarea, button {
+        font-size: 16px !important; /* Evita zoom en iOS */
+    }
+    
+    /* Mejoras para el footer */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-icons {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Ajustes de layout para el contacto */
+    .contact-info-container,
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    /* Responsivo para franquicias.html */
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .franchise-stats {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 2rem auto;
+    }
+    
+    .stat {
+        margin-bottom: 1rem;
+    }
+    
+    .investment-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+    
+    .process-steps .step {
+        margin-bottom: 1rem;
+    }
+    
+    .franchise-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .banner {
+        height: 60vh;
+    }
+    
+    .page-banner {
+        height: 25vh;
+    }
+    
+    .banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .page-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .banner p, .page-banner p {
+        font-size: 1rem;
+    }
+    
+    section h2 {
+        font-size: 1.7rem;
+    }
+    
+    /* Ajustes para franquicias.html */
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .intro-image img {
+        height: 250px;
+    }
+    
+    /* Ajustes específicos para elementos pequeños */
+    .filter-btn {
+        margin-bottom: 0.3rem;
+    }
+    
+    .benefit-card, .job-card, .feature-card, .service-card, .tutorial-card {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-form-container h2, 
+    .contact-info-container h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mejoras para pantallas grandes */
+@media (min-width: 1200px) {
+    .container, 
+    .grid-container,
+    .services-grid,
+    .tutorial-grid,
+    .contact-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .feature-card img {
+        height: 280px;
+    }
+    
+    .banner {
+        height: 80vh;
+    }
+    
+    .banner-content {
+        max-width: 1000px;
+    }
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+    outline: 2px solid #ff6b6b;
+    outline-offset: 2px;
+}
+
+a:focus, button:focus {
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}

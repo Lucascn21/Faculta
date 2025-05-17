@@ -1,0 +1,167 @@
+/* Mejoras adicionales para responsividad */
+
+/* Mejoras específicas para dispositivos móviles y tablet */
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    input, select, textarea, button {
+        font-size: 16px !important; /* Evita zoom en iOS */
+    }
+    
+    /* Header y navegación */
+    .menu.active {
+        overflow-y: auto; /* Scroll si el menú es largo */
+    }
+    
+    /* Elementos de imágenes responsivos */
+    .feature-card img, 
+    .service-image img, 
+    .tutorial-card img {
+        height: 200px;
+    }
+    
+    /* Mejoras para el footer */
+    .footer-content {
+        text-align: center;
+    }
+    
+    .social-icons {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Ajustes de layout para el contacto */
+    .contact-info-container,
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    /* Banner ajustable */
+    .banner, .page-banner {
+        background-attachment: scroll; /* Mejora en dispositivos móviles */
+    }
+
+    /* Filtros de catálogo */
+    .filter-options {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Ajustes para franquicias */
+    .stat {
+        margin-bottom: 1rem;
+    }
+    
+    .process-steps .step {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajustes específicos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .banner {
+        height: 60vh;
+    }
+    
+    .page-banner {
+        height: 25vh;
+    }
+    
+    .banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .page-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .banner p, .page-banner p {
+        font-size: 1rem;
+    }
+    
+    section h2 {
+        font-size: 1.7rem;
+    }
+    
+    /* Ajustes para franquicias.html */
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .intro-image img {
+        height: 250px;
+    }
+    
+    /* Ajustes específicos para elementos pequeños */
+    .filter-btn {
+        margin-bottom: 0.3rem;
+    }
+    
+    .benefit-card, .job-card, .feature-card, .service-card, .tutorial-card {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-form-container h2, 
+    .contact-info-container h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mejoras para pantallas grandes */
+@media (min-width: 1200px) {
+    .container, 
+    .grid-container,
+    .services-grid,
+    .tutorial-grid,
+    .contact-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .feature-card img {
+        height: 280px;
+    }
+    
+    .banner {
+        height: 80vh;
+    }
+    
+    .banner-content {
+        max-width: 1000px;
+    }
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+    outline: 2px solid #ff6b6b;
+    outline-offset: 2px;
+}
+
+a:focus, button:focus {
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Mejoras para imágenes en todos los dispositivos */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

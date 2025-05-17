@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda de Gatos</title>
+    <link rel="stylesheet" href="css/common-styles.css">
+    <link rel="stylesheet" href="css/contacto-styles.css">
+    <link rel="stylesheet" href="css/responsive-styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header" id="inicio">
+        <div class="logo">
+            <h1><a href="index.html">Tienda de Gatos</a></h1>
+        </div>
+        <button class="hamburger-btn" aria-label="Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Catálogo</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="menu-tienda.html">Servicios</a></li>
+                <li><a href="trabaja-con-nosotros.html">Empleo</a></li>
+                <li><a href="franquicias.html">Franquicias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="banner-content">
+                <h2>Contacto</h2>
+                <p>Estamos aquí para atenderte</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h2>Envíanos un mensaje</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto:</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="adopcion">Información de adopción</option>
+                                <option value="servicios">Consulta de servicios</option>
+                                <option value="sugerencia">Sugerencias</option>
+                                <option value="reclamo">Reclamo</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="politica" name="politica" required>
+                            <label for="politica">He leído y acepto la política de privacidad</label>
+                        </div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                </div>
+                <div class="contact-info-container">
+                    <h2>Información de Contacto</h2>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h3>Dirección</h3>
+                            <p>Av. de los Gatos 123, Ciudad Felina</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h3>Teléfono</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p>info@tiendadegatos.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-text">
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 9:00 - 18:00<br>
+                            Sábados: 10:00 - 14:00<br>
+                            Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Síguenos</h3>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn">Facebook</a>
+                            <a href="#" class="social-btn">Instagram</a>
+                            <a href="#" class="social-btn">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location">
+            <h2>Nuestra Ubicación</h2>
+            <div class="map-container">
+                <!-- Aquí iría un mapa, pero para este ejemplo usamos un placeholder -->
+                <div class="map-placeholder">
+                    <p>Mapa de ubicación de Tienda de Gatos</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Cómo puedo adoptar un gato?</h3>
+                    <div class="accordion-content">
+                        <p>Para adoptar un gato, simplemente visita nuestra tienda o navega por nuestro catálogo en línea. Una vez que encuentres el gato que te interesa, puedes iniciar el proceso de adopción completando un formulario y realizando una entrevista con nuestro personal.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Qué incluye el precio de adopción?</h3>
+                    <div class="accordion-content">
+                        <p>El precio de adopción incluye vacunación básica, desparasitación, esterilización o castración (si el gato tiene la edad adecuada), microchip de identificación y un chequeo veterinario completo.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Ofrecen servicio de entrega a domicilio?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, ofrecemos servicio de entrega a domicilio para productos y accesorios dentro del área metropolitana. Para las adopciones, preferimos que visites nuestra tienda para conocer al gato personalmente antes de llevarlo a casa.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">¿Tienen servicio de veterinaria?</h3>
+                    <div class="accordion-content">
+                        <p>Sí, contamos con servicio veterinario en nuestras instalaciones. Puedes programar una cita para tu gato en cualquier momento durante el horario de atención.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Tienda de Gatos</h3>
+                <p>Tu tienda de confianza para encontrar el felino perfecto</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Catálogo</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="menu-tienda.html">Servicios</a></li>
+                    <li><a href="trabaja-con-nosotros.html">Empleo</a></li>
+                    <li><a href="franquicias.html">Franquicias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tienda de Gatos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

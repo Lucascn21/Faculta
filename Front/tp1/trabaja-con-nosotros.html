@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - Tienda de Gatos</title>
+    <link rel="stylesheet" href="css/common-styles.css">
+    <link rel="stylesheet" href="css/empleo-styles.css">
+    <link rel="stylesheet" href="css/responsive-styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header" id="inicio">
+        <div class="logo">
+            <h1><a href="index.html">Tienda de Gatos</a></h1>
+        </div>
+        <button class="hamburger-btn" aria-label="Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Catálogo</a></li>
+                <li><a href="tutoriales.html">Tutoriales</a></li>
+                <li><a href="menu-tienda.html">Servicios</a></li>
+                <li><a href="trabaja-con-nosotros.html">Empleo</a></li>
+                <li><a href="franquicias.html">Franquicias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="banner-content">
+                <h2>Trabaja con Nosotros</h2>
+                <p>Únete a nuestro equipo de amantes de los gatos</p>
+            </div>
+        </section>
+
+        <section class="why-work">
+            <h2>¿Por qué trabajar en Tienda de Gatos?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🐱</div>
+                    <h3>Ambiente Felino</h3>
+                    <p>Trabaja rodeado de gatos adorables todos los días. ¡El mejor ambiente laboral!</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Crecimiento Profesional</h3>
+                    <p>Ofrecemos capacitación continua y oportunidades de crecimiento dentro de la empresa.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Aprendizaje Constante</h3>
+                    <p>Aprende sobre cuidados felinos, medicina veterinaria y atención al cliente especializada.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">❤️</div>
+                    <h3>Trabajo con Propósito</h3>
+                    <p>Ayuda a encontrar hogares amorosos para nuestros gatos y marca la diferencia en sus vidas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="job-openings">
+            <h2>Vacantes Disponibles</h2>
+            <div class="jobs-container">
+                <div class="job-card">
+                    <h3>Veterinario/a Especializado/a en Felinos</h3>
+                    <p class="job-location">Ciudad Felina - Tiempo Completo</p>
+                    <div class="job-description">
+                        <p>Buscamos un veterinario con experiencia en el cuidado de gatos para unirse a nuestro equipo médico.</p>
+                        <h4>Requisitos:</h4>
+                        <ul>
+                            <li>Título en Medicina Veterinaria</li>
+                            <li>Mínimo 2 años de experiencia con felinos</li>
+                            <li>Conocimiento en cirugía menor</li>
+                            <li>Excelentes habilidades de comunicación</li>
+                        </ul>
+                    </div>
+                    <a href="#apply-form" class="btn">Postularme</a>
+                </div>
+                
+                <div class="job-card">
+                    <h3>Especialista en Comportamiento Felino</h3>
+                    <p class="job-location">Ciudad Felina - Medio Tiempo</p>
+                    <div class="job-description">
+                        <p>Necesitamos un especialista en comportamiento felino para asesorar a nuestros clientes y trabajar con gatos en adopción.</p>
+                        <h4>Requisitos:</h4>
+                        <ul>
+                            <li>Certificación en comportamiento animal</li>
+                            <li>Experiencia trabajando con gatos</li>
+                            <li>Habilidad para crear planes de adaptación</li>
+                            <li>Capacidad para ofrecer talleres a clientes</li>
+                        </ul>
+                    </div>
+                    <a href="#apply-form" class="btn">Postularme</a>
+                </div>
+                
+                <div class="job-card">
+                    <h3>Asesor/a de Ventas</h3>
+                    <p class="job-location">Ciudad Felina - Tiempo Completo</p>
+                    <div class="job-description">
+                        <p>Buscamos asesores de venta apasionados por los gatos para orientar a nuestros clientes en el proceso de adopción.</p>
+                        <h4>Requisitos:</h4>
+                        <ul>
+                            <li>Experiencia en ventas (preferiblemente en mascotas)</li>
+                            <li>Conocimiento sobre razas de gatos</li>
+                            <li>Excelente atención al cliente</li>
+                            <li>Disponibilidad para trabajar fines de semana</li>
+                        </ul>
+                    </div>
+                    <a href="#apply-form" class="btn">Postularme</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="apply-form" class="apply">
+            <h2>Postúlate Ahora</h2>
+            <form class="application-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Puesto al que postula:</label>
+                    <select id="position" name="position" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="veterinario">Veterinario/a</option>
+                        <option value="especialista">Especialista en Comportamiento</option>
+                        <option value="ventas">Asesor/a de Ventas</option>
+                        <option value="otro">Otro (especificar)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Experiencia con gatos:</label>
+                    <textarea id="experience" name="experience" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cv">Subir CV (PDF):</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf" required>
+                </div>
+                <button type="submit" class="btn">Enviar Solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Tienda de Gatos</h3>
+                <p>Tu tienda de confianza para encontrar el felino perfecto</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Catálogo</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="menu-tienda.html">Servicios</a></li>
+                    <li><a href="trabaja-con-nosotros.html">Empleo</a></li>
+                    <li><a href="franquicias.html">Franquicias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tienda de Gatos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Estilos específicos para la página de Contacto */
+
+/* Sección de contacto general */
+.contact-section {
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-align: center;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #3a3a3a;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-check input {
+    margin-right: 0.5rem;
+}
+
+.contact-info-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-info-container h2 {
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #ff6b6b;
+    min-width: 40px;
+    text-align: center;
+}
+
+.info-text h3 {
+    margin-bottom: 0.3rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.info-text p {
+    color: #ccc;
+}
+
+/* Sección de ubicación */
+.location {
+    padding: 4rem 2rem;
+    background-color: #121212;
+    text-align: center;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    background-color: #1e1e1e;
+    color: #777;
+    padding: 8rem 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Sección de preguntas frecuentes */
+.faq {
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 2rem auto 0;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 1rem 1.5rem;
+    background-color: #2a2a2a;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+}
+
+.accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+}
+
+.accordion-item.active .accordion-header::after {
+    content: '-';
+}
+
+.accordion-content {
+    background-color: #1e1e1e;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.5rem;
+    max-height: 300px;
+}
+
+.accordion-content p {
+    text-align: left;
+    color: #ccc;
+}
+
+/* Redes sociales */
+.social-links {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.social-btn {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #ff6b6b;
+}
