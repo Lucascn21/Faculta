@@ -1,0 +1,28 @@
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-nav {
+  background-color: #f8f8f8;
+  padding: 0.5rem 0;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-nav li {
+  margin: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 0.5rem 1rem;
+}
