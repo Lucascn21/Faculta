@@ -1,99 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>S.H.I.T</title>  </head>
+    <title>S.H.I.T - Contacta a los Grises</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
   <body>
     <header>
-      <h1>Servicios de Higiene Integral y Transformación</h1>
+      <h1>Servicios Híbridos de Integración y Transformación</h1>
+      <p>"Alienígenas expertos en limpieza, ayudando a los humanos con sus mascotas"</p>
     </header>
     <nav class="main-nav">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./products.html">Productos</a></li>
-        <li><a href="./contact.html">Contacto</a></li>
-        <li><a href="./about.html">Nosotros</a></li>
+        <li><a href="./products.html">Productos Intergalácticos</a></li>
+        <li><a href="./contact.html">Contacta a los Grises</a></li>
+        <li><a href="./about.html">Sobre Nosotros (Alienígenas)</a></li>
       </ul>
     </nav>
     <main>
-      <!-- Formulario de Contacto -->
-      <section class="contact-form-section">
-        <h2>Contacta con nosotros</h2>
-        <form class="contact-form">
-          <!-- Campos del formulario -->
+      <section class="contact-section">
+        <h2>Contacta con la Nave Nodriza (o con nuestros agentes terrestres)</h2>
+        <p>¿Tienes preguntas sobre nuestros productos? ¿Necesitas ayuda con una mancha particularmente persistente dejada por tu... espécimen terrestre? ¿O quizás has visto algo... inusual en el cielo nocturno? No dudes en comunicarte. Usamos tecnología de encriptación avanzada, así que tu secreto está a salvo.</p>
+        
+        <form action="#" method="POST" class="contact-form">
           <div class="form-group">
-            <!-- Campo nombre -->
+            <label for="name">Tu Designación Humana (Nombre):</label>
+            <input type="text" id="name" name="name" required placeholder="Ej: Humano #734">
           </div>
           <div class="form-group">
-            <!-- Campo email -->
+            <label for="email">Tu Canal de Comunicación (Email):</label>
+            <input type="email" id="email" name="email" required placeholder="humano734@dominio.terrestre">
           </div>
           <div class="form-group">
-            <!-- Campo asunto -->
+            <label for="subject">Asunto de la Transmisión:</label>
+            <input type="text" id="subject" name="subject" required placeholder="Consulta sobre tecnología de limpieza / Avistamiento">
           </div>
           <div class="form-group">
-            <!-- Campo mensaje -->
+            <label for="message">Mensaje (Describe tu situación o avistamiento):</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Mi mascota ha dejado un rastro de ectoplasma... otra vez."></textarea>
           </div>
           <div class="form-group">
-            <!-- Botón enviar -->
+            <label for="species">Especie de Mascota (Opcional, para referencia):</label>
+            <input type="text" id="species" name="species" placeholder="Canis familiaris, Felis catus, especimen no identificado...">
           </div>
+          <button type="submit" class="cta-button">Enviar Transmisión</button>
         </form>
-      </section>
-
-      <!-- Información de Contacto -->
-      <section class="contact-info">
-        <h2>Información de contacto</h2>
-        <div class="info-container">
-          <!-- Teléfono -->
-          <div class="info-card">
-            <!-- Información teléfono -->
-          </div>
-          <!-- Email -->
-          <div class="info-card">
-            <!-- Información email -->
-          </div>
-          <!-- Horarios -->
-          <div class="info-card">
-            <!-- Información horarios -->
-          </div>
-        </div>
-        <!-- Mapa -->
-        <div class="map-container">
-          <!-- Mapa de ubicación -->
-        </div>
-      </section>
-
-      <!-- Preguntas Frecuentes -->
-      <section class="faq-section">
-        <h2>Preguntas frecuentes</h2>
-        <div class="faq-container">
-          <!-- Pregunta 1 -->
-          <div class="faq-item">
-            <!-- Pregunta y respuesta -->
-          </div>
-          <!-- Pregunta 2 -->
-          <div class="faq-item">
-            <!-- Pregunta y respuesta -->
-          </div>
-          <!-- Pregunta 3 -->
-          <div class="faq-item">
-            <!-- Pregunta y respuesta -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Soporte Técnico -->
-      <section class="technical-support">
-        <h2>Soporte técnico</h2>
-        <div class="support-info">
-          <!-- Información de soporte -->
+        
+        <div class="alternative-contact">
+          <h3>Otros Canales de Comunicación (Menos Seguros):</h3>
+          <p><strong>Señal de Humo Estándar:</strong> Busca una montaña alta y sigue el protocolo estándar. Podríamos tardar en responder.</p>
+          <p><strong>Telepatía (Solo para Iniciados):</strong> Concéntrate en la imagen de un alienígena gris limpiando. Si lo haces bien, te oiremos.</p>
+          <p><strong>Dirección Postal (Nuestra Base Camuflada):</strong> Área 51 ½, Desierto de Nevada (No intentes visitarnos sin invitación, tenemos... defensas).</p>
         </div>
       </section>
     </main>
     <footer>
       <p>
-        &copy; 2025 Servicios de Higiene Integral y Transformación. Todos los
-        derechos reservados.
+        &copy; 2025 Servicios Híbridos de Integración y Transformación. Todos los derechos reservados (en este sistema solar).
       </p>
     </footer>
   </body>

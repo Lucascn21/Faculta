@@ -1,28 +1,516 @@
+/* Estilo general */
+body {
+  background-color: #0d0d0d; /* Fondo oscuro para misterio */
+  color: #ffffff; /* Blanco puro para mayor contraste */
+  font-family: "Orbitron", sans-serif; /* Fuente futurista */
+  margin: 0;
+  padding: 0;
+}
+
 header {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+  color: #00ffcc; /* Verde alienígena más brillante */
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.3);
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 .main-nav {
-  background-color: #f8f8f8;
-  padding: 0.5rem 0;
+  background-color: #1a1a1a;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2);
 }
 
 .main-nav ul {
   display: flex;
   justify-content: center;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
 .main-nav li {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 }
 
-a {
+.main-nav a {
+  color: #ffffff; /* Blanco para enlaces */
   text-decoration: none;
-  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+.main-nav a:hover {
+  color: #ff0066; /* Rojo para un efecto de peligro */
+}
+
+.hero-section {
+  background: url("../public/ambiente_icono_2_png.png") no-repeat center
+    center/cover;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 5rem 2rem;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  color: #ffffff; /* Blanco para el título */
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  margin-bottom: 1.5rem; /* Increased margin-bottom */
+}
+
+.hero-banner p {
+  font-size: 1.5rem;
+  margin: 2rem 0; /* Increased top/bottom margin */
+  color: #e0e0e0; /* Gris claro para subtítulos */
+  text-shadow: 0 0 5px #00ffcc;
+  line-height: 1.6; /* Añadido para mejorar el espaciado entre líneas del párrafo */
+  margin-bottom: 2rem; /* Aumentado para más separación del botón */
+}
+
+.cta-button {
+  background-color: #00ffcc;
+  color: #0d0d0d;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff0066;
+  transform: scale(1.1);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.benefits-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* Blanco para encabezados */
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background-color: #262626;
+  padding: 2.5rem; /* Aumentado para más espacio interno */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center; /* Added to center text */
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 1rem; /* Increased margin-bottom */
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #e0e0e0; /* Gris claro para texto */
+  text-shadow: 0 0 5px #000000; /* Sombra negra para legibilidad */
+  line-height: 1.6; /* Added line-height for better readability */
+}
+
+/* Featured Products Section */
+.featured-products {
+  padding: 4rem 2rem;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* Blanco para encabezados */
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #262626;
+  padding: 2.5rem; /* Aumentado para más espacio interno */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Added to center text */
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.product-card h3 {
+  font-size: 1.4rem;
+  color: #444;
+  margin-bottom: 0.8rem; /* Increased margin-bottom */
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #e0e0e0; /* Gris claro para texto */
+  margin-bottom: 1.8rem; /* Increased margin-bottom for more space above price */
+  text-shadow: 0 0 5px #000000; /* Sombra negra para legibilidad */
+  line-height: 1.5; /* Added line-height */
+}
+
+.product-price {
   display: block;
-  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffcc; /* Changed to alien green for thematic consistency */
+  margin-bottom: 1.5rem; /* Ensures space between price and button */
+}
+
+.cta-button-secondary {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button-secondary:hover {
+  background-color: #0056b3;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* Blanco para encabezados */
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: #262626;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center; /* Added to center text */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card blockquote {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-card cite {
+  color: #ffffff; /* Blanco puro para mayor contraste */
+  font-style: italic;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc; /* Sombra para resaltar */
+}
+
+/* Educational Section */
+.educational-section {
+  padding: 4rem 2rem;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+.educational-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* Blanco para encabezados */
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.educational-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .educational-content {
+    grid-template-columns: 2fr 1fr; /* Texto más ancho, imagen más pequeña */
+  }
+}
+
+.educational-content p {
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Gris claro para texto */
+  line-height: 1.6;
+  text-shadow: 0 0 5px #000000; /* Sombra negra para legibilidad */
+}
+
+.educational-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 0 auto; /* Centrar en mobile */
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a1a1a, #333333);
+  text-align: center;
+  line-height: 1.8; /* Espaciado entre líneas para mayor claridad */
+}
+
+.cta-section h2 {
+  margin-bottom: 1.5rem; /* Espaciado adicional debajo del título */
+}
+
+.cta-section p {
+  margin-bottom: 2rem; /* Espaciado adicional debajo del párrafo */
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #e0e0e0; /* Gris claro para texto del pie de página */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px #000000;
+}
+
+/* About, Contact, and Products Pages Specific Styles */
+.about-section,
+.contact-section,
+.products-page-section {
+  padding: 3rem 2rem;
+  background-color: #121212; /* Fondo ligeramente más claro que el body */
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+}
+
+.about-section h2,
+.contact-section h2,
+.products-page-section h2 {
+  color: #00ffcc;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.about-section p,
+.contact-section p,
+.products-page-section p {
+  line-height: 1.7;
+  color: #c0c0c0; /* Gris más claro para mejor lectura */
+  text-align: justify;
+}
+
+.about-image {
+  display: block;
+  margin: 2rem auto;
+  max-width: 300px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.values-grid,
+.team-grid,
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card,
+.team-member,
+.certification-card {
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #00ffcc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover,
+.team-member:hover,
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3);
+}
+
+.value-card h3,
+.team-member h3 {
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+.team-image,
+.certification-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #00ffcc;
+}
+
+/* Contact Page Specific Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #00ffcc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #00ffcc;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  font-family: "Orbitron", sans-serif;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777;
+}
+
+.alternative-contact {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.alternative-contact h3 {
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+/* Products Page Specific Styles */
+.products-grid-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-image-page {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 2px solid #00ffcc;
+}
+
+.product-price {
+  display: block;
+  color: #00ffcc;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.cta-button-secondary {
+  background-color: transparent;
+  color: #00ffcc;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #00ffcc;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button-secondary:hover {
+  background-color: #00ffcc;
+  color: #0d0d0d;
+  transform: scale(1.05);
+}
+
+.faq-section {
+  margin-top: 3rem;
+}
+
+.faq-item {
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #00ffcc;
+  text-align: center; /* Added to center text */
+}
+
+.faq-item h4 {
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
 }

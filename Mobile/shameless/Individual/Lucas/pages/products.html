@@ -1,90 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>S.H.I.T</title>  </head>
+    <title>S.H.I.T - Productos Intergalácticos</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
   <body>
     <header>
-      <h1>Servicios de Higiene Integral y Transformación</h1>
+      <h1>Servicios Híbridos de Integración y Transformación</h1>
+      <p>"Alienígenas expertos en limpieza, ayudando a los humanos con sus mascotas"</p>
     </header>
     <nav class="main-nav">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./products.html">Productos</a></li>
-        <li><a href="./contact.html">Contacto</a></li>
-        <li><a href="./about.html">Nosotros</a></li>
+        <li><a href="./products.html">Productos Intergalácticos</a></li>
+        <li><a href="./contact.html">Contacta a los Grises</a></li>
+        <li><a href="./about.html">Sobre Nosotros (Alienígenas)</a></li>
       </ul>
     </nav>
     <main>
-      <!-- Filtros de Búsqueda -->
-      <section class="filters-section">
-        <h2>Filtrar productos</h2>
-        <div class="filters-container">
-          <!-- Filtro por tipo de mascota -->
-          <div class="filter-group">
-            <h3>Tipo de mascota</h3>
-            <!-- Opciones de filtro -->
-          </div>
-          <!-- Filtro por tipo de producto -->
-          <div class="filter-group">
-            <h3>Tipo de producto</h3>
-            <!-- Opciones de filtro -->
-          </div>
-          <!-- Filtro por espacio -->
-          <div class="filter-group">
-            <h3>Espacio</h3>
-            <!-- Opciones de filtro -->
-          </div>
+      <section class="products-page-section">
+        <h2>Nuestra Tecnología de Limpieza Avanzada (Adaptada para Humanos)</h2>
+        <p>Directamente desde los laboratorios de Zeta Reticuli (con algunas modificaciones para no desintegrar materia orgánica terrestre), presentamos nuestra línea de productos S.H.I.T. Diseñados para combatir las... emanaciones más problemáticas de sus formas de vida domesticadas.</p>
+        
+        <div class="products-grid-page">
+          <!-- Producto 1 -->
+          <article class="product-card" id="producto1">
+            <img src="../public/limpiador_enzimatico_pro.png" alt="Limpiador Enzimático Pro Alienígena" class="product-image-page">
+            <h3>Limpiador Enzimático Pro-Gravitacional</h3>
+            <p>Utiliza micro-singularidades para descomponer manchas a nivel subatómico. Ideal para "accidentes" que parecen desafiar las leyes de la física.</p>
+            <span class="product-price">$19.99 (o 3 unidades de iridio puro)</span>
+            <button class="cta-button-secondary">Añadir al Carrito de Muestras</button>
+          </article>
+          
+          <!-- Producto 2 -->
+          <article class="product-card" id="producto2">
+            <img src="../public/desodorante_ultra_frescor_2.png" alt="Desodorante Ultra Frescor Alienígena" class="product-image-page">
+            <h3>Desodorante de Agujero Negro para Literas</h3>
+            <p>No solo enmascara los olores, los absorbe en una micro-dimensión de bolsillo. Mantiene la litera fresca por eones (o hasta la próxima limpieza).</p>
+            <span class="product-price">$12.99 (o un artefacto terrestre curioso)</span>
+            <button class="cta-button-secondary">Añadir al Carrito de Muestras</button>
+          </article>
+          
+          <!-- Producto 3 -->
+          <article class="product-card" id="producto3">
+            <img src="../public/limpieza_total_2.png" alt="Kit Limpieza Total Alienígena" class="product-image-page">
+            <h3>Kit de Saneamiento Taquiónico Total</h3>
+            <p>Todo lo necesario para una descontaminación completa: limpiador, desodorante y una pala sónica que desintegra los residuos (¡cuidado con los dedos!).</p>
+            <span class="product-price">$29.99 (o información sobre su líder mundial)</span>
+            <button class="cta-button-secondary">Añadir al Carrito de Muestras</button>
+          </article>
+
+          <!-- Nuevo Producto Alienígena 1 -->
+          <article class="product-card" id="producto4">
+            <img src="../public/olores_icono_2.png" alt="Spray Anti-Materia Oscura para Olores" class="product-image-page">
+            <h3>Spray Neutralizador de Materia Oscura (Para Olores Rebeldes)</h3>
+            <p>Formulado con partículas de materia oscura estabilizada para neutralizar olores que ni siquiera sabías que existían. Efectivo contra hedores de otras dimensiones.</p>
+            <span class="product-price">$24.99 (o un mapa detallado de sus bases militares)</span>
+            <button class="cta-button-secondary">Añadir al Carrito de Muestras</button>
+          </article>
+
+          <!-- Nuevo Producto Alienígena 2 -->
+          <article class="product-card" id="producto5">
+            <img src="../public/seguridad_icono_2.png" alt="Guantes de Contención Biológica Alienígena" class="product-image-page">
+            <h3>Guantes de Contención Biológica (Nivel Alpha-7)</h3>
+            <p>Protege tus apéndices superiores de cualquier sustancia biopeligrosa terrestre. Reutilizables y se auto-limpian con luz estelar.</p>
+            <span class="product-price">$15.99 (o un espécimen de su flora local más extraña)</span>
+            <button class="cta-button-secondary">Añadir al Carrito de Muestras</button>
+          </article>
+
         </div>
       </section>
-
-      <!-- Catálogo Principal -->
-      <section class="product-catalog">
-        <h2>Nuestros productos</h2>
-        <div class="products-grid">
-          <!-- Productos -->
-          <div class="product-card">
-            <!-- Producto 1 -->
-          </div>
-          <div class="product-card">
-            <!-- Producto 2 -->
-          </div>
-          <div class="product-card">
-            <!-- Producto 3 -->
-          </div>
-          <div class="product-card">
-            <!-- Producto 4 -->
-          </div>
-          <div class="product-card">
-            <!-- Producto 5 -->
-          </div>
-          <div class="product-card">
-            <!-- Producto 6 -->
-          </div>
+      
+      <section class="product-faq-section">
+        <h2>Preguntas Frecuentes de los Humanos</h2>
+        <div class="faq-item">
+          <h4>¿Sus productos son seguros para mi mascota terrestre?</h4>
+          <p>Hemos realizado pruebas exhaustivas en varias especies (algunas voluntariamente, otras... no tanto). Son seguros si se siguen las instrucciones. No nos hacemos responsables de mutaciones inesperadas o desarrollo de habilidades psíquicas.</p>
         </div>
-      </section>
-
-      <!-- Sección "Cómo Usar" -->
-      <section class="how-to-use">
-        <h2>Cómo usar nuestros productos</h2>
-        <div class="usage-instructions">
-          <!-- Instrucciones de uso -->
+        <div class="faq-item">
+          <h4>¿Realmente vienen del espacio?</h4>
+          <p>Esa es información clasificada. Disfrute de su hogar limpio y no haga demasiadas preguntas. Por su propia seguridad.</p>
         </div>
-      </section>
-
-      <!-- Productos Complementarios -->
-      <section class="complementary-products">
-        <h2>Productos complementarios</h2>
-        <div class="complementary-grid">
-          <!-- Productos complementarios -->
+        <div class="faq-item">
+          <h4>¿Qué pasa si mi mascota ingiere el producto?</h4>
+          <p>Recomendamos contactar a su... "veterinario" local. Y quizás prepararse para algunos efectos secundarios interesantes. O no. Probablemente no.</p>
         </div>
       </section>
     </main>
     <footer>
       <p>
-        &copy; 2025 Servicios de Higiene Integral y Transformación. Todos los
-        derechos reservados.
+        &copy; 2025 Servicios Híbridos de Integración y Transformación. Todos los derechos reservados (en este sistema solar).
       </p>
     </footer>
   </body>
